@@ -1,0 +1,45 @@
+﻿@model  MVC.Models.mvcEmployee
+@{
+    ViewBag.Title = "AddorEdit";
+}
+
+<div class="form-body">
+     @using (Html.BeginForm())
+     {
+         <div class="form-group">
+             @Html.LabelFor(model => model.Firstname)
+             @Html.EditorFor(model => model.Firstname)
+             @Html.ValidationMessageFor(model => model.Firstname)
+
+         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lastname)
+            @Html.EditorFor(model => model.Lastname)
+            @Html.ValidationMessageFor(model => model.Lastname)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Gender)
+            @Html.EditorFor(model => model.Gender)
+            @Html.ValidationMessageFor(model => model.Gender)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Salary)
+            @Html.EditorFor(model => model.Salary)
+            @Html.ValidationMessageFor(model => model.Salary)
+
+        </div>
+
+        <div class="form-group">
+            <input type="submit"value="Submit" class="btn button" />
+            <input type="reset" value="Reset" class="btn button" />
+            <a href="http://localhost:54344/" class="btn btn-default"><i class="fa fa-plus">View Details</i></a>
+
+        </div>
+     }
+
+
+</div>
